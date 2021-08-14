@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B24C09BD828F3DD1B4AFE0F7 /* Pods_RGBSliders.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0BF04AC8DFECDBFFD002008 /* Pods_RGBSliders.framework */; };
 		D81E66A726C7CFCF00B7AAF3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81E66A626C7CFCF00B7AAF3 /* AppDelegate.swift */; };
 		D81E66A926C7CFCF00B7AAF3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81E66A826C7CFCF00B7AAF3 /* SceneDelegate.swift */; };
 		D81E66AB26C7CFCF00B7AAF3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81E66AA26C7CFCF00B7AAF3 /* ViewController.swift */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		52FDE340B96CCD31AB413F2C /* Pods-RGBSliders.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RGBSliders.debug.xcconfig"; path = "Target Support Files/Pods-RGBSliders/Pods-RGBSliders.debug.xcconfig"; sourceTree = "<group>"; };
+		5345FF7975A3C5ECF7D10094 /* Pods-RGBSliders.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RGBSliders.release.xcconfig"; path = "Target Support Files/Pods-RGBSliders/Pods-RGBSliders.release.xcconfig"; sourceTree = "<group>"; };
 		D81E66A326C7CFCF00B7AAF3 /* RGBSliders.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RGBSliders.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D81E66A626C7CFCF00B7AAF3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D81E66A826C7CFCF00B7AAF3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +27,7 @@
 		D81E66AF26C7CFD300B7AAF3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D81E66B226C7CFD300B7AAF3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D81E66B426C7CFD300B7AAF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E0BF04AC8DFECDBFFD002008 /* Pods_RGBSliders.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RGBSliders.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B24C09BD828F3DD1B4AFE0F7 /* Pods_RGBSliders.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6201D64A2C5B70E52C079209 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E0BF04AC8DFECDBFFD002008 /* Pods_RGBSliders.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8B351A8E64CA9EB711CD4149 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				52FDE340B96CCD31AB413F2C /* Pods-RGBSliders.debug.xcconfig */,
+				5345FF7975A3C5ECF7D10094 /* Pods-RGBSliders.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		D81E669A26C7CFCF00B7AAF3 = {
 			isa = PBXGroup;
 			children = (
 				D81E66A526C7CFCF00B7AAF3 /* RGBSliders */,
 				D81E66A426C7CFCF00B7AAF3 /* Products */,
+				8B351A8E64CA9EB711CD4149 /* Pods */,
+				6201D64A2C5B70E52C079209 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D81E66B726C7CFD300B7AAF3 /* Build configuration list for PBXNativeTarget "RGBSliders" */;
 			buildPhases = (
+				FCB4264B8D67E8778C9842F5 /* [CP] Check Pods Manifest.lock */,
 				D81E669F26C7CFCF00B7AAF3 /* Sources */,
 				D81E66A026C7CFCF00B7AAF3 /* Frameworks */,
 				D81E66A126C7CFCF00B7AAF3 /* Resources */,
+				B608D0867EDECCF8BEC59B32 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -131,6 +158,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B608D0867EDECCF8BEC59B32 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RGBSliders/Pods-RGBSliders-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RGBSliders/Pods-RGBSliders-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RGBSliders/Pods-RGBSliders-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FCB4264B8D67E8778C9842F5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RGBSliders-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D81E669F26C7CFCF00B7AAF3 /* Sources */ = {
@@ -283,6 +352,7 @@
 		};
 		D81E66B826C7CFD300B7AAF3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52FDE340B96CCD31AB413F2C /* Pods-RGBSliders.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -302,6 +372,7 @@
 		};
 		D81E66B926C7CFD300B7AAF3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5345FF7975A3C5ECF7D10094 /* Pods-RGBSliders.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
