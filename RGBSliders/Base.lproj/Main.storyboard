@@ -69,16 +69,16 @@
                                                         <rect key="frame" x="16" y="0.0" width="382" height="34"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8F9-F9-8Dn">
-                                                                <rect key="frame" x="0.0" y="0.0" width="16" height="34"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="20" height="34"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="width" constant="16" id="uuv-Sf-VCj"/>
+                                                                    <constraint firstAttribute="width" constant="20" id="uuv-Sf-VCj"/>
                                                                 </constraints>
-                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                                                 <color key="textColor" systemColor="systemRedColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="TGu-dn-XYl">
-                                                                <rect key="frame" x="24" y="0.0" width="300" height="35"/>
+                                                                <rect key="frame" x="28" y="0.0" width="296" height="35"/>
                                                                 <color key="tintColor" systemColor="systemRedColor"/>
                                                             </slider>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="255" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KCR-if-FDT">
@@ -95,16 +95,16 @@
                                                         <rect key="frame" x="16" y="64" width="382" height="34"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="G" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iWv-GE-ioe">
-                                                                <rect key="frame" x="0.0" y="0.0" width="16" height="34"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="20" height="34"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="width" constant="16" id="qiI-KR-S42"/>
+                                                                    <constraint firstAttribute="width" constant="20" id="qiI-KR-S42"/>
                                                                 </constraints>
-                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                                                 <color key="textColor" systemColor="systemGreenColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="oF2-hb-pxM">
-                                                                <rect key="frame" x="24" y="0.0" width="300" height="35"/>
+                                                                <rect key="frame" x="28" y="0.0" width="296" height="35"/>
                                                                 <color key="tintColor" systemColor="systemGreenColor"/>
                                                             </slider>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="255" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nH8-QG-0dr">
@@ -121,16 +121,16 @@
                                                         <rect key="frame" x="16" y="128" width="382" height="34"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="B" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n38-3R-lkV">
-                                                                <rect key="frame" x="0.0" y="0.0" width="16" height="34"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="20" height="34"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="width" constant="16" id="pLO-9m-dW7"/>
+                                                                    <constraint firstAttribute="width" constant="20" id="pLO-9m-dW7"/>
                                                                 </constraints>
-                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                                                 <color key="textColor" systemColor="systemBlueColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="o6Y-BA-poM">
-                                                                <rect key="frame" x="24" y="0.0" width="300" height="35"/>
+                                                                <rect key="frame" x="28" y="0.0" width="296" height="35"/>
                                                                 <color key="tintColor" systemColor="systemBlueColor"/>
                                                             </slider>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="255" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e0R-aJ-TCp">
