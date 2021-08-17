@@ -31,19 +31,49 @@ class ViewController: UIViewController {
     blueTextField.delegate = self
     
     let redNum = redTextField.rx.text.orEmpty
-      .compactMap { Int($0) }
-      .filter { 0 ..< 256 ~= $0 }
+      .map { [weak self] text -> Int in
+        guard let self = self, let num = Int(text) else { return 0 }
+        guard num <= Int(self.redSlider.maximumValue) else {
+          return Int(self.redSlider.maximumValue)
+        }
+        return num
+      }
       .share()
     
     let greenNum = greenTextField.rx.text.orEmpty
-      .compactMap { Int($0) }
-      .filter { 0 ..< 256 ~= $0 }
+      .map { [weak self] text -> Int in
+        guard let self = self, let num = Int(text) else { return 0 }
+        guard num <= Int(self.greenSlider.maximumValue) else {
+          return Int(self.greenSlider.maximumValue)
+        }
+        return num
+      }
       .share()
     
     let blueNum = blueTextField.rx.text.orEmpty
-      .compactMap { Int($0) }
-      .filter { 0 ..< 256 ~= $0 }
+      .map { [weak self] text -> Int in
+        guard let self = self, let num = Int(text) else { return 0 }
+        guard num <= Int(self.blueSlider.maximumValue) else {
+          return Int(self.blueSlider.maximumValue)
+        }
+        return num
+      }
       .share()
+    
+    redNum
+      .map { String($0) }
+      .bind(to: redTextField.rx.text)
+      .disposed(by: disposeBag)
+
+    greenNum
+      .map { String($0) }
+      .bind(to: greenTextField.rx.text)
+      .disposed(by: disposeBag)
+
+    blueNum
+      .map { String($0) }
+      .bind(to: blueTextField.rx.text)
+      .disposed(by: disposeBag)
   
     redNum
       .bind(to: viewModel.red)
