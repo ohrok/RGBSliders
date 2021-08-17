@@ -84,17 +84,25 @@
 		D81E66A526C7CFCF00B7AAF3 /* RGBSliders */ = {
 			isa = PBXGroup;
 			children = (
-				D81E66A626C7CFCF00B7AAF3 /* AppDelegate.swift */,
-				D81E66A826C7CFCF00B7AAF3 /* SceneDelegate.swift */,
 				D81E66AA26C7CFCF00B7AAF3 /* ViewController.swift */,
 				D85BBC7626CB835B008DE930 /* ViewModel.swift */,
-				D85BBC7826CB8650008DE930 /* UIColor+hex.swift */,
 				D81E66AC26C7CFCF00B7AAF3 /* Main.storyboard */,
+				D85BBC7A26CB8E1F008DE930 /* SupportingFiles */,
+			);
+			path = RGBSliders;
+			sourceTree = "<group>";
+		};
+		D85BBC7A26CB8E1F008DE930 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				D81E66A626C7CFCF00B7AAF3 /* AppDelegate.swift */,
+				D81E66A826C7CFCF00B7AAF3 /* SceneDelegate.swift */,
+				D85BBC7826CB8650008DE930 /* UIColor+hex.swift */,
 				D81E66AF26C7CFD300B7AAF3 /* Assets.xcassets */,
 				D81E66B126C7CFD300B7AAF3 /* LaunchScreen.storyboard */,
 				D81E66B426C7CFD300B7AAF3 /* Info.plist */,
 			);
-			path = RGBSliders;
+			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -365,7 +373,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PH7H3K3AG6;
-				INFOPLIST_FILE = RGBSliders/Info.plist;
+				INFOPLIST_FILE = RGBSliders/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -385,7 +393,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PH7H3K3AG6;
-				INFOPLIST_FILE = RGBSliders/Info.plist;
+				INFOPLIST_FILE = RGBSliders/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
