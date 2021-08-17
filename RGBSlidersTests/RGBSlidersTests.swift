@@ -19,20 +19,41 @@ class RGBSlidersTests: XCTestCase {
     viewModel = ViewModel()
   }
   
-  func testColorIsRedWhenRedIs255GreenIs0BlueIs0() {
+  func testColorIsWhiteWhenRedIs255AndGreenIs255AndBlueIs255() {
     let disposeBag = DisposeBag()
-    let expectedColor = UIColor(red: 1.0, green: 0.0, blue: 0.0, alpha: 1.0)
+    let expectedColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
     var result: UIColor!
     
     viewModel.color.asObservable()
-      .skip(1)
+      .skip(3)
       .subscribe(onNext: {
         result = $0
       })
       .disposed(by: disposeBag)
     
-    viewModel.red.onNext(255)
+    viewModel.red.accept(255)
+    viewModel.green.accept(255)
+    viewModel.blue.accept(255)
     
     XCTAssertEqual(expectedColor, result)
+  }
+  
+  func testHexStringIsFFFFFFWhenRedIs255AndGreenIs255AndBlueIs255() {
+    let disposeBag = DisposeBag()
+    let expectedHexString = "#ffffff"
+    var result: String!
+    
+    viewModel.hexString.asObservable()
+      .skip(3)
+      .subscribe(onNext: {
+        result = $0
+      })
+      .disposed(by: disposeBag)
+    
+    viewModel.red.accept(255)
+    viewModel.green.accept(255)
+    viewModel.blue.accept(255)
+    
+    XCTAssertEqual(expectedHexString, result)
   }
 }
