@@ -27,10 +27,12 @@ class ViewController: UIViewController {
     super.viewDidLoad()
     
     [
-      (viewModel.red,   redTextField!,   redSlider!),
-      (viewModel.green, greenTextField!, greenSlider!),
-      (viewModel.blue,  blueTextField!,  blueSlider!)
+      (viewModel.red,   redTextField,   redSlider),
+      (viewModel.green, greenTextField, greenSlider),
+      (viewModel.blue,  blueTextField,  blueSlider)
     ].forEach { relay, textField, slider in
+      guard let textField = textField, let slider = slider else { return }
+      
       textField.delegate = self
       
       let textFieldNum = textField.rx.text.orEmpty
