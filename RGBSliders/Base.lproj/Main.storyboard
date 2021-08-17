@@ -81,13 +81,13 @@
                                                                 <rect key="frame" x="28" y="0.0" width="296" height="35"/>
                                                                 <color key="tintColor" systemColor="systemRedColor"/>
                                                             </slider>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="255" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KCR-if-FDT">
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KCR-if-FDT">
                                                                 <rect key="frame" x="332" y="0.0" width="50" height="34"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="50" id="JbZ-6X-Z2d"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                <textInputTraits key="textInputTraits"/>
+                                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                             </textField>
                                                         </subviews>
                                                     </stackView>
@@ -107,13 +107,13 @@
                                                                 <rect key="frame" x="28" y="0.0" width="296" height="35"/>
                                                                 <color key="tintColor" systemColor="systemGreenColor"/>
                                                             </slider>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="255" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nH8-QG-0dr">
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nH8-QG-0dr">
                                                                 <rect key="frame" x="332" y="0.0" width="50" height="34"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="50" id="0Mu-mC-Yqo"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                <textInputTraits key="textInputTraits"/>
+                                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                             </textField>
                                                         </subviews>
                                                     </stackView>
@@ -133,13 +133,13 @@
                                                                 <rect key="frame" x="28" y="0.0" width="296" height="35"/>
                                                                 <color key="tintColor" systemColor="systemBlueColor"/>
                                                             </slider>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="255" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e0R-aJ-TCp">
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e0R-aJ-TCp">
                                                                 <rect key="frame" x="332" y="0.0" width="50" height="34"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="50" id="P8b-bd-bKT"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                <textInputTraits key="textInputTraits"/>
+                                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                             </textField>
                                                         </subviews>
                                                     </stackView>
@@ -188,6 +188,13 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="blueSlider" destination="o6Y-BA-poM" id="Wu1-QJ-U3E"/>
+                        <outlet property="blueTextField" destination="e0R-aJ-TCp" id="Wgt-yV-f4K"/>
+                        <outlet property="colorView" destination="xeF-KO-rS2" id="x7J-M6-0lt"/>
+                        <outlet property="greenSlider" destination="oF2-hb-pxM" id="9xo-PO-GfK"/>
+                        <outlet property="greenTextField" destination="nH8-QG-0dr" id="Gag-RK-Uca"/>
+                        <outlet property="hexLabel" destination="7xh-ae-4OO" id="Xda-ED-IrC"/>
+                        <outlet property="redSlider" destination="TGu-dn-XYl" id="QM0-3C-tX9"/>
                         <outlet property="redTextField" destination="KCR-if-FDT" id="RII-Zj-IAd"/>
                     </connections>
                 </viewController>
