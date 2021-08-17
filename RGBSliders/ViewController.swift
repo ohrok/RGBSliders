@@ -26,6 +26,10 @@ class ViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    redTextField.delegate = self
+    greenTextField.delegate = self
+    blueTextField.delegate = self
+    
     let redNum = redTextField.rx.text.orEmpty
       .compactMap { Int($0) }
       .filter { 0 ..< 256 ~= $0 }
@@ -105,6 +109,22 @@ class ViewController: UIViewController {
     viewModel.hexString
       .drive(hexLabel.rx.text)
       .disposed(by: disposeBag)
+  }
+}
+
+extension ViewController: UITextFieldDelegate {
+  
+  func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+    let maxLength = 3
+    guard let oldText = textField.text, let stringRange = Range(range, in:oldText) else {
+      return false
+    }
+    let newText = oldText.replacingCharacters(in: stringRange, with: string)
+    
+    if string == "\n" {
+      return true
+    }
+    return newText.count < maxLength + 1
   }
 }
 
