@@ -187,6 +187,9 @@
                             <constraint firstItem="1ug-FK-w55" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="ixn-fN-Zcm"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="redTextField" destination="KCR-if-FDT" id="RII-Zj-IAd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

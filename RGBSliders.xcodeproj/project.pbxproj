@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,8 @@
 		D81E66AE26C7CFCF00B7AAF3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D81E66AC26C7CFCF00B7AAF3 /* Main.storyboard */; };
 		D81E66B026C7CFD300B7AAF3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D81E66AF26C7CFD300B7AAF3 /* Assets.xcassets */; };
 		D81E66B326C7CFD300B7AAF3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D81E66B126C7CFD300B7AAF3 /* LaunchScreen.storyboard */; };
+		D85BBC7726CB835B008DE930 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85BBC7626CB835B008DE930 /* ViewModel.swift */; };
+		D85BBC7926CB8650008DE930 /* UIColor+hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85BBC7826CB8650008DE930 /* UIColor+hex.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,8 @@
 		D81E66AF26C7CFD300B7AAF3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D81E66B226C7CFD300B7AAF3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D81E66B426C7CFD300B7AAF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D85BBC7626CB835B008DE930 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		D85BBC7826CB8650008DE930 /* UIColor+hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+hex.swift"; sourceTree = "<group>"; };
 		E0BF04AC8DFECDBFFD002008 /* Pods_RGBSliders.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RGBSliders.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -56,7 +60,6 @@
 				52FDE340B96CCD31AB413F2C /* Pods-RGBSliders.debug.xcconfig */,
 				5345FF7975A3C5ECF7D10094 /* Pods-RGBSliders.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -84,6 +87,8 @@
 				D81E66A626C7CFCF00B7AAF3 /* AppDelegate.swift */,
 				D81E66A826C7CFCF00B7AAF3 /* SceneDelegate.swift */,
 				D81E66AA26C7CFCF00B7AAF3 /* ViewController.swift */,
+				D85BBC7626CB835B008DE930 /* ViewModel.swift */,
+				D85BBC7826CB8650008DE930 /* UIColor+hex.swift */,
 				D81E66AC26C7CFCF00B7AAF3 /* Main.storyboard */,
 				D81E66AF26C7CFD300B7AAF3 /* Assets.xcassets */,
 				D81E66B126C7CFD300B7AAF3 /* LaunchScreen.storyboard */,
@@ -208,6 +213,8 @@
 			files = (
 				D81E66AB26C7CFCF00B7AAF3 /* ViewController.swift in Sources */,
 				D81E66A726C7CFCF00B7AAF3 /* AppDelegate.swift in Sources */,
+				D85BBC7926CB8650008DE930 /* UIColor+hex.swift in Sources */,
+				D85BBC7726CB835B008DE930 /* ViewModel.swift in Sources */,
 				D81E66A926C7CFCF00B7AAF3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
