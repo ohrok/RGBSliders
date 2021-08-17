@@ -98,16 +98,12 @@ class ViewController: UIViewController {
       .bind(to: blueTextField.rx.text)
       .disposed(by: disposeBag)
     
-    viewModel.color.asObservable()
-      .subscribe(onNext: {
-        print($0)
-      })
+    viewModel.color
+      .drive(colorView.rx.backgroundColor)
       .disposed(by: disposeBag)
     
-    viewModel.hexString.asObservable()
-      .subscribe(onNext: {
-        print($0)
-      })
+    viewModel.hexString
+      .drive(hexLabel.rx.text)
       .disposed(by: disposeBag)
   }
 }
