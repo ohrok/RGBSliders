@@ -68,6 +68,36 @@ class ViewController: UIViewController {
       .bind(to: blueSlider.rx.value)
       .disposed(by: disposeBag)
     
+    redSlider.rx.value
+      .map { Int($0) }
+      .bind(to: viewModel.red)
+      .disposed(by: disposeBag)
+    
+    greenSlider.rx.value
+      .map { Int($0) }
+      .bind(to: viewModel.green)
+      .disposed(by: disposeBag)
+    
+    blueSlider.rx.value
+      .map { Int($0) }
+      .bind(to: viewModel.blue)
+      .disposed(by: disposeBag)
+    
+    redSlider.rx.value
+      .map { "\(Int($0))" }
+      .bind(to: redTextField.rx.text)
+      .disposed(by: disposeBag)
+    
+    greenSlider.rx.value
+      .map { "\(Int($0))" }
+      .bind(to: greenTextField.rx.text)
+      .disposed(by: disposeBag)
+    
+    blueSlider.rx.value
+      .map { "\(Int($0))" }
+      .bind(to: blueTextField.rx.text)
+      .disposed(by: disposeBag)
+    
     viewModel.color.asObservable()
       .subscribe(onNext: {
         print($0)
