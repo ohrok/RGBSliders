@@ -26,111 +26,47 @@ class ViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    redTextField.delegate = self
-    greenTextField.delegate = self
-    blueTextField.delegate = self
-    
-    let redNum = redTextField.rx.text.orEmpty
-      .map { [weak self] text -> Int in
-        guard let self = self, let num = Int(text) else { return 0 }
-        guard num <= Int(self.redSlider.maximumValue) else {
-          return Int(self.redSlider.maximumValue)
+    [
+      (viewModel.red,   redTextField!,   redSlider!),
+      (viewModel.green, greenTextField!, greenSlider!),
+      (viewModel.blue,  blueTextField!,  blueSlider!)
+    ].forEach { relay, textField, slider in
+      textField.delegate = self
+      
+      let textFieldNum = textField.rx.text.orEmpty
+        .map { text -> Int in
+          guard let num = Int(text) else { return 0 }
+          guard num <= Int(slider.maximumValue) else {
+            return Int(slider.maximumValue)
+          }
+          return num
         }
-        return num
-      }
-      .share()
-    
-    let greenNum = greenTextField.rx.text.orEmpty
-      .map { [weak self] text -> Int in
-        guard let self = self, let num = Int(text) else { return 0 }
-        guard num <= Int(self.greenSlider.maximumValue) else {
-          return Int(self.greenSlider.maximumValue)
-        }
-        return num
-      }
-      .share()
-    
-    let blueNum = blueTextField.rx.text.orEmpty
-      .map { [weak self] text -> Int in
-        guard let self = self, let num = Int(text) else { return 0 }
-        guard num <= Int(self.blueSlider.maximumValue) else {
-          return Int(self.blueSlider.maximumValue)
-        }
-        return num
-      }
-      .share()
-    
-    redNum
-      .map { String($0) }
-      .bind(to: redTextField.rx.text)
-      .disposed(by: disposeBag)
-
-    greenNum
-      .map { String($0) }
-      .bind(to: greenTextField.rx.text)
-      .disposed(by: disposeBag)
-
-    blueNum
-      .map { String($0) }
-      .bind(to: blueTextField.rx.text)
-      .disposed(by: disposeBag)
-  
-    redNum
-      .bind(to: viewModel.red)
-      .disposed(by: disposeBag)
-    
-    greenNum
-      .bind(to: viewModel.green)
-      .disposed(by: disposeBag)
-    
-    blueNum
-      .bind(to: viewModel.red)
-      .disposed(by: disposeBag)
-    
-    redNum
-      .map { Float($0) }
-      .bind(to: redSlider.rx.value)
-      .disposed(by: disposeBag)
-    
-    greenNum
-      .map { Float($0) }
-      .bind(to: greenSlider.rx.value)
-      .disposed(by: disposeBag)
-    
-    blueNum
-      .map { Float($0) }
-      .bind(to: blueSlider.rx.value)
-      .disposed(by: disposeBag)
-    
-    redSlider.rx.value
-      .map { Int($0) }
-      .bind(to: viewModel.red)
-      .disposed(by: disposeBag)
-    
-    greenSlider.rx.value
-      .map { Int($0) }
-      .bind(to: viewModel.green)
-      .disposed(by: disposeBag)
-    
-    blueSlider.rx.value
-      .map { Int($0) }
-      .bind(to: viewModel.blue)
-      .disposed(by: disposeBag)
-    
-    redSlider.rx.value
-      .map { "\(Int($0))" }
-      .bind(to: redTextField.rx.text)
-      .disposed(by: disposeBag)
-    
-    greenSlider.rx.value
-      .map { "\(Int($0))" }
-      .bind(to: greenTextField.rx.text)
-      .disposed(by: disposeBag)
-    
-    blueSlider.rx.value
-      .map { "\(Int($0))" }
-      .bind(to: blueTextField.rx.text)
-      .disposed(by: disposeBag)
+        .share()
+      
+      textFieldNum
+        .map { String($0) }
+        .bind(to: textField.rx.text)
+        .disposed(by: disposeBag)
+      
+      textFieldNum
+        .bind(to: relay)
+        .disposed(by: disposeBag)
+      
+      textFieldNum
+        .map { Float($0) }
+        .bind(to: slider.rx.value)
+        .disposed(by: disposeBag)
+      
+      slider.rx.value
+        .map { Int($0) }
+        .bind(to: relay)
+        .disposed(by: disposeBag)
+      
+      slider.rx.value
+        .map { "\(Int($0))" }
+        .bind(to: textField.rx.text)
+        .disposed(by: disposeBag)
+     }
     
     viewModel.color
       .drive(colorView.rx.backgroundColor)
