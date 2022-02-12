@@ -68,7 +68,7 @@ class ViewController: UIViewController {
         .map { "\(Int($0))" }
         .bind(to: textField.rx.text)
         .disposed(by: disposeBag)
-     }
+    }
     
     viewModel.color
       .drive(colorView.rx.backgroundColor)
